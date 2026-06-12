@@ -8,7 +8,7 @@ import joblib
 # ==========================
 
 try:
-    model = joblib.load("best_model.pkl")
+    model = joblib.load("best_model.joblib")
     model_loaded = True
 except:
     model_loaded = False
