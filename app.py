@@ -47,6 +47,11 @@ with col1:
         "Sexe",
         ["F", "M"]
     )
+
+    handcap = st.selectbox(
+    "Handicap",
+    [0, 1, 2, 3, 4]
+)
     sms_received = st.selectbox(
         "SMS reçu",
         [0, 1]
@@ -89,14 +94,15 @@ if st.button("Prédire le risque de No-Show"):
     if model_loaded:
 
         data = pd.DataFrame({
+            "Gender": [1 if gender == "M" else 0],
             "Age": [age],
             "Scholarship": [scholarship],
             "Hipertension": [hypertension],
             "Diabetes": [diabetes],
             "Alcoholism": [alcoholism],
+            "Handcap": [handcap],
             "SMS_received": [sms_received],
-            "waiting_days": [waiting_days],
-            "Gender_M": [1 if gender == "M" else 0]
+            "waiting_days": [waiting_days]
         })
 
         prediction = model.predict(data)[0]
