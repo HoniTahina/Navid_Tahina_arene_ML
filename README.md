@@ -29,8 +29,9 @@ Questions ouvertes : pas pour l'instant.
 
 ### Pré-requis
 
-1. Créer un environnement virtuel : `navid_tahina_python venv arene_ml_venv` puis l'activer : `.\navid_tahina_arene_ml_venv\Scripts\Activate.ps1`ou commande similaire selon votre terminal/OS
+1. Créer un environnement virtuel : `python -m venv navid_tahina_arene_ml_venv` puis l'activer : `.\navid_tahina_arene_ml_venv\Scripts\Activate.ps1`ou commande similaire selon votre terminal/OS
 2. Installer les librairies nécessaires : `pip install -r requirements.txt`
+3. Ouvrir Jupyter local : `jupyter lab`
 
 ### Résultats
 
